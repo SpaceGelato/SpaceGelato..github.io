@@ -74,16 +74,16 @@
         <div class="">
             <div id="container" class="split left"></div>
             <div class="split right">
-                <h1>SQL-Examples</h1>
-                <label for="courses">Choose a Course:</label>
+                <h1>Примеры SQL запросов</h1>
+                <label for="courses">Выбрать курс:</label>
                 <select name="courses" id="courses" onchange="selectCourse();">
                     <option> </option>
                 </select>
-                <label for="queries">Choose a Query:</label>
+                <label for="queries">Выбрать запрос:</label>
                 <select name="queries" id="queries" onchange="selectQuery();">
                     <option> </option>
                 </select>
-                <input type="button" name="run" value="run" onclick="execQuery();">
+                <input type="button" name="run" value="Исполнить" onclick="execQuery();">
                 <div id="error" class="error"></div>
                 <pre id="output">Results will be displayed here</pre>
             </div>
@@ -101,11 +101,12 @@
         <script>
 var db;
 var initValue = `/* 
-Here you can enter your queries and execute them with F5.
-You can use the drop-down menus to select the sample queries.
-As an alternative to the F5 key, you can also click on "run" on the right.
+Здесь можно вводить свои примеры запросов к базе, чтобы выполнить
+запрос нажми F5. Можно использовать выпадающее меню для выбора 
+тестовых запросов к базе. Выполнять запрос можно нажатием кнопки "Исполнить"
+справа.
 
-This query shows you all available tables and columns that are currently loaded in SQLite.
+Запрос ниже показывает все доступные таблицы и поля, загруженные в SQLite.
 */
 
 SELECT 
@@ -189,7 +190,7 @@ function execute(commands) {
         action: 'exec',
         sql: commands
     });
-    outputElm.textContent = "Fetching results...";
+    outputElm.textContent = "Получение результата...";
 }
 
 var tableCreate = function() {
