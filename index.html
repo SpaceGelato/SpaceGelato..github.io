@@ -155,7 +155,7 @@ var myBinding = editor.addCommand(monaco.KeyCode.F5, function() {
 });
 
 config = {
-    locateFile: filename => `.sqljs/${filename}`
+    locateFile: filename => `./sqljs/${filename}`
 }
 
 initSqlJs(config).then(function(SQL) {
